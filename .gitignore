@@ -1,6 +1,6 @@
 # Dialog Files
-*.D
-*.csv
+# *.D
+# *.csv
 
 # Audio Files
 *.mp3
@@ -10,7 +10,7 @@
 .venv/
 
 # Environment Variables
-.env
+#.env
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

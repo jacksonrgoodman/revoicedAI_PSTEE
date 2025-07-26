@@ -1,0 +1,3 @@
+filename,line_number,say_id,text
+EXAMPLE.D,12,55077,This is an example of text that is read.
+EXAMPLE.D,18,57767,"This is another example of text that is read, after the first dialog, after the first option is chosen."
