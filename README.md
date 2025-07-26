@@ -11,5 +11,6 @@ I am not interested in having a discussion about the use of AI with strangers on
 2. Install the software NearInfinity
 3. Use NearInfinity to extract all of the `.dlg` files as WeIDU `.d` dialog files from `\chitin.key\DLG`
 4. place in root of this project in folder called `"dialog-extract"`
-
-5. configure elevenlabs?
+5. configure env variables
+6. set up venv and install requirements
+6. run main.py
