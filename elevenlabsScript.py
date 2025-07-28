@@ -20,6 +20,9 @@ def generate_audio_from_csv(csv_path, output_dir, api_key, voice_id, model_id):
                 continue
             filename = f"{row['filename']}_line{row['line_number']}.mp3"
             out_path = os.path.join(output_dir, filename)
+            if os.path.exists(out_path):
+                print(f"Skipping (already exists): {out_path}")
+                continue
             audio_gen = eleven.text_to_speech.convert(
                 voice_id=voice_id,
                 model_id=model_id,
@@ -31,6 +34,3 @@ def generate_audio_from_csv(csv_path, output_dir, api_key, voice_id, model_id):
                 for chunk in audio_gen:
                     out.write(chunk)
             print("Generated:", out_path)
-
-if __name__ == "__main__":
-    generate_audio_from_csv(DIALOGUE_CSV, OUTPUT_AUDIO_DIR, API_KEY, VOICE_ID, MODEL_ID)
